@@ -1,26 +1,24 @@
 # xke-vimtastic
 
-## First backup your existing Vim config
+## Node project setup
+
+Now that your Vim has been configured you are ready to tackle some file editing and navigation
+
+### You need node
+
+We recommend using [nvm](https://github.com/creationix/nvm) for managing node versions on your system.
+
+It can be installed liked this:
 
 ```
-mv ~/.vimrc ~/.vimrc.bak
-mv ~/.vim ~/.vim.bak
-```
-
-## Copy this Vim configuration
-
-```
-cp .vimrc ~/.vimrc
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
 ```
 
-## Install Vundle
+## The project
 
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-## Install Plugins
+### Install dependencies
 
-```
-vim +PluginInstall +qall
-```
+```npm install```
+
+
