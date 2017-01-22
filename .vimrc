@@ -31,7 +31,10 @@ syntax on
 let mapleader=","
 noremap \ ,
 
-color Tomorrow-Night-Eighties
+try
+  color Tomorrow-Night-Eighties
+catch
+endtry
 
 set cursorline
 set expandtab
