@@ -2,8 +2,9 @@
   "name": "xke-vimtastic",
   "version": "1.0.0",
   "description": "XKE Vimtastic",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "node --harmony src/index.js",
     "lint": "eslint src/*.js"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "eslint": "3.14.0",
     "eslint-config-airbnb-base": "11.0.1",
     "eslint-plugin-import": "2.2.0"
+  },
+  "dependencies": {
+    "express": "4.14.0"
   }
 }

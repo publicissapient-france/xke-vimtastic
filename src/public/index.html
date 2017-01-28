@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/lodash.debounce.min.js"></script>
+    <style>
+      body {
+        font-family: Georgia;
+      }
+      .content {
+        margin-left: 10em;
+        width: 70%;
+      }
+      h1 {
+        font-family: sans-serif;
+      }
+      input {
+        font-size: 14pt;
+        padding: 0.4em;
+      }
+      .loader {
+        display: none;
+        margin-left: 1em;
+      }
+      .results div {
+        border-bottom: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Search French monuments by region</h1>
+        <div><input type="text" placeholder="Region..." /><span class="loader">Loading...</span></div>
+        <div class="results">
+      </div>
+    </div>
+
+    <script>
+      const filterInput = document.querySelector('input');
+      const loader = document.querySelector('.loader');
+      const results = document.querySelector('.results');
+      function filter(e) {
+        if (e.target.value.length > 1) {
+          loader.style.display = 'inline';
+          axios.get('/api/search?q=' + e.target.value).then((res) => {
+            loader.style.display = 'none';
+            results.innerHTML = res.data;
+          });
+        }
+      }
+
+      const debouncedFilter = _.debounce(filter, 300);
+      filterInput.addEventListener('keyup', debouncedFilter);
+    </script>
+  </body>
+</html>
