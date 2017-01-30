@@ -1,0 +1,27 @@
+body {
+  font-family: Georgia;
+}
+
+.content {
+  margin-left: 10em;
+  width: 70%;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+input {
+  font-size: 14pt;
+  padding: 0.4em;
+}
+
+.loader {
+  display: none;
+  margin-left: 1em;
+}
+
+.results div {
+  border-bottom: 1px solid gray;
+}
+
