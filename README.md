@@ -93,3 +93,31 @@ Moving on - index.html contains a mix of html, css and js - let's extract the cs
 ### Extract the js from index.html
 
 Next up is the javascript in the body of our html ...
+
+### Working with large files
+
+Let's get the complete file of monuments - change into the data directory and download the file (see README.md)
+
+We need to analyse the contents and make some changes.
+
+1. Open up the file:
+
+    ```
+    vim merimee-MH.json
+    ```
+
+2. Let Python format the file (Yes... you need Python)
+
+    ```
+    :%!python -m json.tool
+    ```
+
+3. Find and replace
+
+4. Folding
+
+5.
+
+### Use the file in our project
+
+
