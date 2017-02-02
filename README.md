@@ -1,5 +1,7 @@
 # xke-vimtastic
 
+We will first configure your Vim installation
+
 ## First backup your existing Vim config
 
 ```
@@ -25,7 +27,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
 
-## A deep dive into .vimrc
+## One last thing...
+
+While editing files in Vim you will be doing a lot of scrolling and in order to make this as fast as possible we recommend you set your key repeat delay to a minimum!
+
+On MacOS you do this by going to `System Preferences... -> Keyboard` and drag both the `Key Repeat` and `Delay Until Repeat` sliders all the way to the right.
+
+
+## Demystifying .vimrc
 
 Let's have a closer look at the configuration.
 
@@ -33,7 +42,7 @@ Let's have a closer look at the configuration.
 vim .vimrc
 ```
 
-First comes the plugins, there are hundreds of plugins available from Github...
+First comes the plugins which we let `Vundle` manage, there are lots of plugins available on Github and `Vundle` makes it easy to install new ones.
 
 We set the `mapleader` to `,`. The `mapleader` is used for distinguishing commands from each other as we will see later. This is set to `\` by default.
 We then make the `\` map to `,` to give us the option to do both.
@@ -47,7 +56,9 @@ The `vim-colorschemes` plugin lets you can switch between a large number of colo
 
 ### Built-in options
 
-There are a large number of options Vim. Perhaps one of the confusing settings is `relativenumber`. This is however useful to count how many lines we want to copy or delete.
+There are a large number of Vim options. Perhaps one of the more confusing settings is `relativenumber`. This is however useful to count how many lines we want to copy or delete.
+
+But don't worry you can always `:set norelativenumber` and `:set number` if you want to see the line numbers temporarily.
 
 We set the folding options to some sensible defaults
 
@@ -57,9 +68,10 @@ The `Nerdtree` and `CtrlP` plugins are configured to ignore certain file types a
 
 ### Custom functions
 
-It is possible to define functions making use of other built-in functions.
+Vim allows you to define custom functions which in turn can make use of other built-in functions.
 
-The `SyntasticEslintChecker()` runs `eslint` on the currently open file.
+Our custom function `SyntasticEslintChecker()` runs `eslint` on every save of the currently open file.
+Similarly `EslintFix()` runs `eslint --fix` on the current file.
 
 ### Auto commands
 
