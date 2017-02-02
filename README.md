@@ -78,7 +78,7 @@ Moving on - index.html contains a mix of html, css and js - let's extract the cs
 2. Create a `css` directory under `src/public` - put the cursor on the `public` directory line, hit `m` (for menu) and `a` to "add a childnode". Type `css/` when prompted and don't forget the trailing `/` (otherwise you'll end up with a file)
 3. Open `index.html` using Ctrl-P this time. `<Ctrl>+p` and start typing `index` - scroll to `index.html` and open it with `<Enter>`.
 4. Open a new buffer `:vnew src/public/css/main.css`
-5. `<tab>` back to `index.html` and copy the contents of `<style>` - Make use of the relative lines to see how many you need to cut and enter `<number of lines>dd`
+5. `<tab>` back to `index.html` and copy the contents of `<style>` - This time Visual mode to select the code, `<Shift>+V` to enter "Visual line mode" and select the style lines, and `d` to cut.
 6. `<tab>` over to the css file and `p` to paste content
 7. The `<Ctrl>+f` mapping runs `JsBeautify` which corrects the indentation for us
 8. `<tab>` back to `index.html` and import our extracted styles
@@ -92,4 +92,4 @@ Moving on - index.html contains a mix of html, css and js - let's extract the cs
 
 ### Extract the js from index.html
 
-Next up is the javascript in the body of our html
+Next up is the javascript in the body of our html ...
