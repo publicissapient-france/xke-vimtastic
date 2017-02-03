@@ -35,7 +35,7 @@ Go ahead and `npm start` it and verify it works ok.
 
 [http://localhost:3000](http://localhost:3000)
 
-### Refactorisation
+### Refactoring
 
 Start by opening up Vim in the current directory.
 
@@ -142,19 +142,18 @@ We need to analyse the contents and make some changes.
 
 1. Find all instances of `region` - `:lvim region src/**`
    - Vim will open the first matching file
-2. Let's start by replacing the function name in `index.js` by typing `:%s/findByRegion/findByCity/gc` and `<Enter>`
-   - confirm the changes one by one.
-3. Same again in `monuments.js`
-   - Type `:` and `<arrow-up>` to find the last command and run it again
-3. Type `:lopen` to see the list of other matches
-4. Open `index.html` and type `/region` and `<Enter>` to jump to the first match
+2. Type `:lopen` to see the list matches
+3. Let's start by replacing the function name in all js files
+    - Define that we want to search in all .js files `:arg src/**/*.js`
+    - Place the cursor on the `findByRegion` function and type `*` to find all matches in file
+    - Type `:argdo %s//findByCity/ge | update` and `<Enter>` to apply command to all files in `args` for the last searched word (`findByRegion`)
+4. Next open `index.html` and type `/region` and `<Enter>` to jump to the first match
 5. Type `ciw` to delete the word and put Vim in Insert mode. Type `city` and `<Esc>` to exit Insert mode.
 6. Type `n` to jump to the next match and `.` to repeat the last command.
-7. Let's make that first letter capital - Type `b` to go to the beginning of the word and `rC` to replace the first letter with a capital C.
-8. Finally we'll find and replace the `REG` field by `COM` in all files:
-    - Add files to search with `:arg src/**/*.js`
-    - Place the cursor on the `REG` word and type `*` to find all matches in file
-    - Type `:argdo %s//COM/ge` and `<Enter>` to apply command to all files in `args` for the given word
-8. Save all your files with `:wa`
+7. Let's make that first letter capital
+    - Type `b` to go to the beginning of the word and `rC` to replace the first letter with a capital C.
+8. Finally we'll find and replace the `REG` field by `COM` in `index.js`:
+    - Type `:%s/REG/COM/g`
+9. Save all your files with `:wa`
 
 ## You can now search for monuments by City! ✨
