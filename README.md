@@ -1,8 +1,8 @@
 # xke-vimtastic
 
-## Node project setup
-
 Now that your Vim has been configured you are ready to tackle some file editing and navigation
+
+## Node project setup
 
 ### You need node
 
@@ -13,7 +13,7 @@ It can be installed liked this:
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 ```
-Note: You may have to manually export the `.nvm` directory.
+Note: You may have to manually add the `.nvm` directory to your `$PATH`.
 
 Now you can install node 6 like this:
 
@@ -33,7 +33,9 @@ This little application lets you search for french monuments by region.
 
 Go ahead and `npm start` it and verify it works ok.
 
-### Navigation
+[http://localhost:3000](http://localhost:3000)
+
+### Refactorisation
 
 Start by opening up Vim in the current directory.
 
@@ -96,7 +98,7 @@ Moving on - index.html contains a mix of html, css and js - let's extract the cs
 
 Next up is the javascript in the body of our html ... go ahead and extract it to a its' own file in the `src/public/js` directory.
 
-### Working with large files
+## Working with large files
 
 Let's get the complete file of monuments - change into the data directory and download the file (see README.md)
 
@@ -136,17 +138,23 @@ We need to analyse the contents and make some changes.
 2. Replace `firstHundred` by `merimee-MH`, again using `ciw` to replace.
 3. Run the application and enjoy searching all french monuments! 🎉
 
-### The client wants to search by city instead
+### But the client wants to search by city instead!
 
 1. Find all instances of `region` - `:lvim region src/**`
    - Vim will open the first matching file
 2. Let's start by replacing the function name in `index.js` by typing `:%s/findByRegion/findByCity/gc` and `<Enter>`
    - confirm the changes one by one.
+3. Same again in `monuments.js`
+   - Type `:` and `<arrow-up>` to find the last command and run it again
 3. Type `:lopen` to see the list of other matches
 4. Open `index.html` and type `/region` and `<Enter>` to jump to the first match
 5. Type `ciw` to delete the word and put Vim in Insert mode. Type `city` and `<Esc>` to exit Insert mode.
 6. Type `n` to jump to the next match and `.` to repeat the last command.
-7. Let's make that first letter capital - Type `b` to go to the beginning of the word and `r` to replace the first letter with a capital C.
+7. Let's make that first letter capital - Type `b` to go to the beginning of the word and `rC` to replace the first letter with a capital C.
+8. Finally we'll find and replace the `REG` field by `COM` in all files:
+    - Add files to search with `:arg src/**/*.js`
+    - Place the cursor on the `REG` word and type `*` to find all matches in file
+    - Type `:argdo %s//COM/ge` and `<Enter>` to apply command to all files in `args` for the given word
 8. Save all your files with `:wa`
 
-### You can now search by City!
+## You can now search for monuments by City! ✨
