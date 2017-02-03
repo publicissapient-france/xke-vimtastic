@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 
-const { findByRegion, toHtml } = require('./monuments');
+const { findByCity, toHtml } = require('./monuments');
 
 const app = express();
 
@@ -18,7 +18,7 @@ fs.readFile(path.join(__dirname, '/data/firstHundred.json'), { encoding: 'utf-8'
 });
 
 app.get('/api/search', (req, res) => {
-  res.send(toHtml(findByRegion(monumentData, req.query.q)));
+  res.send(toHtml(findByCity(monumentData, req.query.q)));
 });
 
 app.use(express.static(path.join(__dirname, '/public')));
