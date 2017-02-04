@@ -95,3 +95,12 @@ The first argument is the key combination, and the second is a combination of ke
 
 For example `noremap <tab> <c-w><c-w>` maps the `tab` key to `Ctrl+w Ctrl+w` to switch between buffers.
 
+
+## Ready to use Vim?
+
+Once you are happy with the configuration, you can try out Vim in a small project
+
+```git checkout node```
+
+[node branch](https://github.com/xebia-france/xke-vimtastic/tree/node)
+
