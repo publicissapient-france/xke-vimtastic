@@ -148,6 +148,7 @@ We need to analyse the contents and make some changes.
 1. Find all instances of `region` - `:lvim region src/**`
    - Vim will open the first matching file
 2. Type `:lopen` to see the list matches
+   - Close with `:q` after inspecting the matches
 3. Let's start by replacing the function name in all js files
     - Define that we want to search in all .js files `:arg src/**/*.js`
     - Place the cursor on the `findByRegion` function and type `*` to find all matches in file
@@ -157,8 +158,9 @@ We need to analyse the contents and make some changes.
 6. Type `n` to jump to the next match and `.` to repeat the last command.
 7. Let's make that first letter capital
     - Type `b` to go to the beginning of the word and `rC` to replace the first letter with a capital C.
-8. Finally we'll find and replace the `REG` field by `COM` in `index.js`:
+8. Finally we'll find and replace the `REG` field by `COM` in `monuments.js`:
+    - Open `monuments.js` using `<Ctrl>+p`
     - Type `:%s/REG/COM/g`
-9. Save all your files with `:wa`
+9. Save all your open buffers with `:wa`
 
 ## You can now search for monuments by City! ✨
