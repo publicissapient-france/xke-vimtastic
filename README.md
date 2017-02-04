@@ -2,7 +2,7 @@
 
 Now that your Vim has been configured you are ready to tackle some file editing and navigation
 
-## Node project setup
+## Prerequisites
 
 ### You need node
 
@@ -30,6 +30,8 @@ npm install
 ## The Project: Monumental search engine
 
 This little application lets you search for french monuments by region.
+
+Follow along the instructions to discover how you can approach different tasks in Vim
 
 Go ahead and `npm start` it and verify it works ok.
 
@@ -73,6 +75,9 @@ Let's extract some of those functions to a separate source file, call it `momume
     ```
 
 9. Save and close your buffers `:wq` and start the project to verify everything is still working ok.
+
+#### Eslint
+You may have noticed that words get highlighted in red, this is `SyntasticEslint` linting our files as we write our buffer to disk. Go ahead and fix the issues as you move along the steps.
 
 ### Extract the css from index.html
 
