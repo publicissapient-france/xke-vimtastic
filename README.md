@@ -73,6 +73,8 @@ Vim allows you to define custom functions which in turn can make use of other bu
 Our custom function `SyntasticEslintChecker()` runs `eslint` on every save of the currently open file.
 Similarly `EslintFix()` runs `eslint --fix` on the current file.
 
+`EslintFix()` is then mapped to `<mapleader>fl` - fl as in Fix Lint. With our `mapleader` set to `,` we invoke it with `,fl`
+
 ### Auto commands
 
 Auto commands are invoked on saving a file (writing to a buffer) and we can map it to a specific `FileType`
