@@ -27,6 +27,15 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
 
+
+### Good to know
+
+These commands can be run from anywhere, a distant server for example, and will have you up and running with your favourite Vim settings in minutes.
+
+Just keep your `.vimrc` in a version control system such as Github and download it from the server where you need it.
+
+Ex. `wget https://raw.githubusercontent.com/xebia-france/xke-vimtastic/vimrc/.vimrc`
+
 ## One last thing...
 
 While editing files in Vim you will be doing a lot of scrolling and in order to make this as fast as possible we recommend you set your key repeat delay to a minimum!
@@ -34,7 +43,7 @@ While editing files in Vim you will be doing a lot of scrolling and in order to 
 On MacOS you do this by going to `System Preferences... -> Keyboard` and drag both the `Key Repeat` and `Delay Until Repeat` sliders all the way to the right.
 
 
-## Demystifying .vimrc
+## Demystifying the .vimrc
 
 Let's have a closer look at the configuration.
 
@@ -105,4 +114,3 @@ Once you are happy with the configuration, you can try out Vim in a small projec
 ```git checkout node```
 
 [node branch](https://github.com/xebia-france/xke-vimtastic/tree/node)
-
