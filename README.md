@@ -27,6 +27,13 @@ nvm install 6
 npm install
 ```
 
+## Alternative with docker
+
+If you don't want to setup a node on your engine and you already have Docker, you could done the job with following command :
+```
+docker run -it -p 3000:3000 -v $(pwd):/usr/src/app -w /usr/src/app node:6 npm install && npm start
+```
+
 ## The Project: Monumental search engine
 
 This little application lets you search for french monuments by region.
