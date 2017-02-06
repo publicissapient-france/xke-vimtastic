@@ -55,6 +55,8 @@ set ignorecase
 set smartcase
 set relativenumber
 
+set guifont=Monaco:h13
+
 " folding
 set foldcolumn=4
 set foldmethod=indent

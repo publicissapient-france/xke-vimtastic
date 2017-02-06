@@ -12,7 +12,8 @@ mv ~/.vim ~/.vim.bak
 ## Copy this Vim configuration
 
 ```
-cp .vimrc ~/.vimrc
+cp .vimrc ~/
+cp .ctags ~/
 
 ```
 
