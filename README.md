@@ -43,6 +43,8 @@ While editing files in Vim you will be doing a lot of scrolling and in order to 
 
 On MacOS you do this by going to `System Preferences... -> Keyboard` and drag both the `Key Repeat` and `Delay Until Repeat` sliders all the way to the right.
 
+On GNU/linux (Gnome 3), you do this by going to `Preferences... -> Keyboard`, click on `Key Repeat` and drag `Delay` all the way to the right. You can set up the speed also.
+
 
 ## Demystifying the .vimrc
 
@@ -69,6 +71,7 @@ The `vim-colorschemes` plugin lets you can switch between a large number of colo
 There are a large number of Vim options. Perhaps one of the more confusing settings is `relativenumber`. This is however useful to count how many lines we want to copy or delete.
 
 But don't worry you can always `:set norelativenumber` and `:set number` if you want to see the line numbers temporarily.
+You can also comment any line with a quotation mark: `"` (disable `set relativenumber` which is present on line 55)
 
 We set the folding options to some sensible defaults
 
