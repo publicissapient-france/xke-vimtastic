@@ -164,3 +164,17 @@ We need to analyse the contents and make some changes.
 9. Save all your open buffers with `:wa`
 
 ## You can now search for monuments by City! ✨
+
+### Jump to declaration
+
+Perhaps one of the most useful features of an IDE is the ability to jump to the declaration of a function.
+
+`ctags` let's you do just that!
+
+1. Run `ctags -R src/**` in the root of the project
+    - You should now have a `tags` file
+2. Now reopen the project `vim .` and go to `index.js`
+3. Place the cursor on `toHtml` and press `<Ctrl>+]`
+    - Vim should have opened `monuments.js` with the cursor on the declaration of `toHtml`
+4. You can continue further down into other function calls with `<Ctrl>+]`
+5. To get back up the call stack you press `<Ctrl>+t`
