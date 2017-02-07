@@ -27,9 +27,9 @@ nvm install 6
 npm install
 ```
 
-## Alternative with docker
+### Alternative with Docker
 
-If you don't want to setup a node on your engine and you already have Docker, you could done the job with following command :
+If you don't want to install Node and you have Docker installed, you can run the project with the following command:
 ```
 docker run -it -p 3000:3000 -v $(pwd):/usr/src/app -w /usr/src/app node:6 npm install && npm start
 ```
